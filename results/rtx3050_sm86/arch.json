@@ -1,0 +1,41 @@
+{
+  "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "cc": [
+    8,
+    6
+  ],
+  "sm_count": 20,
+  "regs_per_sm": 65536,
+  "max_regs_per_thread": 255,
+  "max_regs_per_block": 65536,
+  "reg_alloc_unit": 256,
+  "warp_alloc_granularity": 4,
+  "smem_per_sm": 102400,
+  "smem_per_block_optin": 101376,
+  "smem_reserved_per_block": 1024,
+  "smem_alloc_unit": 128,
+  "max_threads_per_sm": 1536,
+  "max_blocks_per_sm": 16,
+  "max_threads_per_block": 1024,
+  "has_cp_async": true,
+  "peak_fp16_tflops": 15.27808,
+  "mem_bw_gbs": 168.024,
+  "provenance": {
+    "regs_per_sm": "live",
+    "max_regs_per_thread": "cuda_guide/occupancy",
+    "max_regs_per_block": "cuda_guide/occupancy",
+    "reg_alloc_unit": "cuda_guide/occupancy",
+    "warp_alloc_granularity": "cuda_guide/occupancy",
+    "smem_per_sm": "cuda_guide/occupancy",
+    "smem_per_block_optin": "live",
+    "smem_reserved_per_block": "cuda_guide/occupancy",
+    "smem_alloc_unit": "cuda_guide/occupancy",
+    "max_threads_per_sm": "live",
+    "max_blocks_per_sm": "cuda_guide/occupancy",
+    "max_threads_per_block": "cuda_guide/occupancy",
+    "has_cp_async": "cuda_guide/occupancy",
+    "sm_count": "live",
+    "peak_fp16_tflops": "estimated from clocks (arch.estimate_peaks)",
+    "mem_bw_gbs": "estimated from clocks (arch.estimate_peaks)"
+  }
+}

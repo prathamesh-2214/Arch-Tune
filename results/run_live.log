@@ -1,0 +1,24 @@
+W1010 15:46:32.453000 284 torch/_inductor/utils.py:1137] [0/0] Not enough SMs to use max_autotune_gemm mode
+Traceback (most recent call last):
+  File "/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/scripts/run_pipeline_local.py", line 43, in main
+    out = P.timed(name, fn, run, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/archtune/pipeline.py", line 379, in timed
+    out = fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/archtune/pipeline.py", line 369, in make_report
+    report.main([])
+  File "/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/archtune/report.py", line 304, in main
+    (docs / "RESULTS.md").write_text(results_markdown(data, figs, rel), encoding="utf-8")
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/archtune/report.py", line 169, in results_markdown
+    from archtune.search import per_shape
+ImportError: cannot import name 'per_shape' from 'archtune.search' (/mnt/c/Users/Prathamesh Deshpande/ArchTune Project/archtune/search.py)
+096   tune    11.3s  7.3574 ms
+unpruned         mm_M4096_N4096_K4096   tune  1305.1s  7.3021 ms
+inductor mm_M128_N1600_K960: 0.8s, 0.2990 ms
+inductor mm_M2048_N2560_K960: 0.1s, 0.6605 ms
+inductor mm_M4096_N4096_K4096: 0.2s, 8.2289 ms
+===== phase8_integration: done in 22.7 min =====
+===== make_report =====
+!!!!! make_report FAILED after 23.0 min total

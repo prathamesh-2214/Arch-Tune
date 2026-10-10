@@ -1,0 +1,286 @@
+W1010 15:19:19.492000 297 torch/_inductor/utils.py:1137] [0/0] Not enough SMs to use max_autotune_gemm mode
+/Users/Prathamesh Deshpande/ArchTune Project/results
+===== phase0_smoke =====
+arch: NVIDIA GeForce RTX 3050 6GB Laptop GPU (8, 6) SMs=20 smem/block=101376 peak=15 TFLOP/s bw=168 GB/s
+live vs reference: no reference entry (peaks estimated from clocks)
+  JITFunction.warmup           (self, *args, grid, **kwargs)
+  maxnreg_in_Config            True
+  Autotuner.prune_configs      (self, kwargs)
+  do_bench                     (fn, warmup=25, rep=100, grad_to_none=None, quantiles=None, return_mode='mean')
+  do_bench_flushes_l2          {'cache.zero_()': True, 'get_empty_cache_for_benchmark': True, 'clear_cache': False}
+  cache_dir_env_read_at_init   {'TRITON_CACHE_DIR': True}
+smoke config: compile 0.49s, regs=96, spills=0, smem=16384, correct=True (max err 0.0621); asm keys ['cubin', 'llir', 'ptx', 'ttgir', 'ttir']
+SASS: available
+noise: CV=0.0538 -> differences < 10.75% are ties
+===== phase0_smoke: done in 0.1 min =====
+===== phase2_sweep =====
+6992 tasks (18 matmul shapes x 384 configs + RMSNorm)
+[sweep] 10 tasks, 10 pending this session (run_id=sweep_v1)
+ESTIMATE for the rest: 69 min (0.1s per compile, 0.58s per task)
+[sweep] 6992 tasks, 6982 pending this session (run_id=sweep_v1)
+[sweep] 100/6982 done, 73s elapsed, ~5028s left
+[sweep] 200/6982 done, 153s elapsed, ~5199s left
+[sweep] 300/6982 done, 348s elapsed, ~7757s left
+[sweep] 400/6982 done, 1336s elapsed, ~21989s left
+[sweep] 500/6982 done, 1342s elapsed, ~17404s left
+[sweep] 600/6982 done, 1349s elapsed, ~14350s left
+[sweep] 700/6982 done, 1355s elapsed, ~12160s left
+[sweep] 800/6982 done, 1360s elapsed, ~10513s left
+[sweep] 900/6982 done, 1367s elapsed, ~9235s left
+[sweep] 1000/6982 done, 1373s elapsed, ~8211s left
+[sweep] 1100/6982 done, 1378s elapsed, ~7370s left
+[sweep] 1200/6982 done, 1384s elapsed, ~6668s left
+[sweep] 1300/6982 done, 1390s elapsed, ~6076s left
+[sweep] 1400/6982 done, 1396s elapsed, ~5567s left
+[sweep] 1500/6982 done, 1402s elapsed, ~5123s left
+[sweep] 1600/6982 done, 1407s elapsed, ~4734s left
+[sweep] 1700/6982 done, 1413s elapsed, ~4392s left
+[sweep] 1800/6982 done, 1419s elapsed, ~4086s left
+[sweep] 1900/6982 done, 1425s elapsed, ~3810s left
+[sweep] 2000/6982 done, 1431s elapsed, ~3563s left
+[sweep] 2100/6982 done, 1437s elapsed, ~3341s left
+[sweep] 2200/6982 done, 1443s elapsed, ~3137s left
+[sweep] 2300/6982 done, 1448s elapsed, ~2948s left
+[sweep] 2400/6982 done, 1454s elapsed, ~2777s left
+[sweep] 2500/6982 done, 1461s elapsed, ~2619s left
+[sweep] 2600/6982 done, 1467s elapsed, ~2473s left
+[sweep] 2700/6982 done, 1472s elapsed, ~2335s left
+[sweep] 2800/6982 done, 1479s elapsed, ~2209s left
+[sweep] 2900/6982 done, 1485s elapsed, ~2090s left
+[sweep] 3000/6982 done, 1491s elapsed, ~1979s left
+[sweep] 3100/6982 done, 1497s elapsed, ~1874s left
+[sweep] 3200/6982 done, 1504s elapsed, ~1777s left
+[sweep] 3300/6982 done, 1510s elapsed, ~1685s left
+[sweep] 3400/6982 done, 1516s elapsed, ~1598s left
+[sweep] 3500/6982 done, 1522s elapsed, ~1514s left
+[sweep] 3600/6982 done, 1528s elapsed, ~1436s left
+[sweep] 3700/6982 done, 1535s elapsed, ~1362s left
+[sweep] 3800/6982 done, 1542s elapsed, ~1291s left
+[sweep] 3900/6982 done, 1548s elapsed, ~1223s left
+[sweep] 4000/6982 done, 1554s elapsed, ~1159s left
+[sweep] 4100/6982 done, 1561s elapsed, ~1097s left
+[sweep] 4200/6982 done, 1567s elapsed, ~1038s left
+[sweep] 4300/6982 done, 1574s elapsed, ~982s left
+[sweep] 4400/6982 done, 1581s elapsed, ~928s left
+[sweep] 4500/6982 done, 1588s elapsed, ~876s left
+[sweep] 4600/6982 done, 1594s elapsed, ~825s left
+[sweep] 4700/6982 done, 1600s elapsed, ~777s left
+[sweep] 4800/6982 done, 1607s elapsed, ~730s left
+[sweep] 4900/6982 done, 1614s elapsed, ~686s left
+[sweep] 5000/6982 done, 1620s elapsed, ~642s left
+[sweep] 5100/6982 done, 1627s elapsed, ~600s left
+[sweep] 5200/6982 done, 1634s elapsed, ~560s left
+[sweep] 5300/6982 done, 1642s elapsed, ~521s left
+[sweep] 5400/6982 done, 1651s elapsed, ~484s left
+[sweep] 5500/6982 done, 1657s elapsed, ~447s left
+[sweep] 5600/6982 done, 1664s elapsed, ~411s left
+[sweep] 5700/6982 done, 1672s elapsed, ~376s left
+[sweep] 5800/6982 done, 1679s elapsed, ~342s left
+[sweep] 5900/6982 done, 1687s elapsed, ~309s left
+[sweep] 6000/6982 done, 1694s elapsed, ~277s left
+[sweep] 6100/6982 done, 1703s elapsed, ~246s left
+[sweep] 6200/6982 done, 1718s elapsed, ~217s left
+[sweep] 6300/6982 done, 1735s elapsed, ~188s left
+[sweep] 6400/6982 done, 1762s elapsed, ~160s left
+[sweep] 6500/6982 done, 1811s elapsed, ~134s left
+[sweep] 6600/6982 done, 1842s elapsed, ~107s left
+[sweep] 6700/6982 done, 1855s elapsed, ~78s left
+[sweep] 6800/6982 done, 1877s elapsed, ~50s left
+[sweep] 6900/6982 done, 1906s elapsed, ~23s left
+status     ok  out_of_resources
+kernel                         
+matmul   5994               918
+rmsnorm    80                 0
+===== phase2_sweep: done in 32.2 min =====
+===== phase3_ir =====
+fast: 7.501 ms, cfg {'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 8, 'num_warps': 8, 'num_stages': 3}, regs 252, spills 0, smem 49152
+  mma\.sync:    630  	mma.sync.aligned.m16n8k16.row.col.f32.f16.f16.f32 { %f770, %f771, %f772, %f773 }, { %r1303, %r1304, %r1305, %r1306 }, { %r1287, %r1288 }, { %f770, %f771, %f772, %f773 };
+  ldmatrix:    292  	ldmatrix.sync.aligned.m8n8.x4.shared.b16 { %r1303, %r1304, %r1305, %r1306 }, [ %r302 + 0 ];
+  cp\.async\.c[ag]:    165  	@%p41 cp.async.cg.shared.global [ %r274 + 0 ], [ %rd25 + 0 ], 0x10, %r277;
+  (ld|st)\.local: (no line matches '(ld|st)\\.local')
+slow: 241.654 ms, cfg {'BLOCK_SIZE_M': 256, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 8, 'num_warps': 2, 'num_stages': 2}, regs 255, spills 1516, smem 32768
+  mma\.sync:   2452  	mma.sync.aligned.m16n8k16.row.col.f32.f16.f16.f32 { %f6146, %f6147, %f6148, %f6149 }, { %r7983, %r7984, %r7985, %r7986 }, { %r7951, %r7952 }, { %f6146, %f6147, %f6148, %f6149 };
+  ldmatrix:    536  	ldmatrix.sync.aligned.m8n8.x4.shared.b16 { %r7983, %r7984, %r7985, %r7986 }, [ %r4159 + 0 ];
+  cp\.async\.c[ag]:    317  	@%p103 cp.async.cg.shared.global [ %r4091 + 0 ], [ %rd68 + 0 ], 0x10, %r1455;
+  (ld|st)\.local: (no line matches '(ld|st)\\.local')
+===== phase3_ir: done in 0.1 min =====
+===== phase4_5_analysis =====
+fitted    regs median|err|=6  smem exact=0.99  spill P/R=0.97/1.00
+analytic  regs median|err|=60  smem exact=0.00  spill P/R=1.00/0.71
+     gpu_tag  kernel split       strategy  n_shapes  reach_rate  median_configs  median_cost_s
+rtx3050_sm86  matmul  test     exhaustive         9         1.0          384.00    1182.554607
+rtx3050_sm86  matmul  test         random         9         1.0            7.00       7.577526
+rtx3050_sm86  matmul  test          smart         9         1.0            1.00       0.653442
+rtx3050_sm86  matmul  test smart_analytic         9         1.0            1.00       0.630052
+rtx3050_sm86  matmul train     exhaustive         9         1.0          384.00    1181.701022
+rtx3050_sm86  matmul train         random         9         1.0           11.50      19.374209
+rtx3050_sm86  matmul train          smart         9         1.0           23.00      11.648750
+rtx3050_sm86  matmul train smart_analytic         9         1.0           17.00       8.790257
+rtx3050_sm86 rmsnorm  test     exhaustive         2         1.0           20.00       3.178699
+rtx3050_sm86 rmsnorm  test         random         2         1.0            5.25       0.815711
+rtx3050_sm86 rmsnorm  test          smart         2         1.0            7.50       1.176907
+rtx3050_sm86 rmsnorm  test smart_analytic         2         1.0            7.50       1.176645
+rtx3050_sm86 rmsnorm train     exhaustive         2         1.0           20.00       3.116873
+rtx3050_sm86 rmsnorm train         random         2         1.0            1.50       0.238285
+rtx3050_sm86 rmsnorm train          smart         2         1.0            2.00       0.283501
+rtx3050_sm86 rmsnorm train smart_analytic         2         1.0            2.00       0.283531
+     gpu_tag  kernel split  random_over_smart
+rtx3050_sm86  matmul  test          11.596328
+rtx3050_sm86  matmul train           1.663201
+rtx3050_sm86 rmsnorm  test           0.693097
+rtx3050_sm86 rmsnorm train           0.840511
+===== phase4_5_analysis: done in 0.2 min =====
+===== phase5_spotcheck =====
+{'shape_id': 'mm_M8192_N2048_K2048', 'tuning_s': 5.958975143999851, 'time_ms': 3.709439992904663, 'sweep_best_ms': 3.752959966659546, 'quality': 1.011732222070751, 'correct': True}
+{'shape_id': 'mm_M512_N2560_K960', 'tuning_s': 5.502145245000065, 'time_ms': 0.14336000382900238, 'sweep_best_ms': 0.13516800105571747, 'quality': 0.9428571250384716, 'correct': True}
+{'shape_id': 'mm_M16_N960_K2560', 'tuning_s': 3.36674890499944, 'time_ms': 0.04198399931192398, 'sweep_best_ms': 0.04095999896526337, 'quality': 0.9756097474408594, 'correct': True}
+===== phase5_spotcheck: done in 0.3 min =====
+===== phase6_experiments =====
+triton 3.2.0: triton.Config(..., maxnreg=...) present
+[sweep] 21 tasks, 21 pending this session (run_id=maxnreg_v1)
+       cfg_label  cap  n_regs  n_spills  shared_bytes  blocks_per_sm  time_ms_median  time_rel status
+128x256x32 w8 s3   64      64       372         49152              2      326.473633 43.981502     ok
+128x256x32 w8 s3   96      96       280         49152              2      240.124924 32.348875     ok
+128x256x32 w8 s3  128     128       178         49152              2      158.695419 21.378948     ok
+128x256x32 w8 s3  168     168        98         49152              1       53.394432  7.193130     ok
+128x256x32 w8 s3  192     192        38         49152              1        8.960000  1.207063     ok
+128x256x32 w8 s3  255     252         0         49152              1        7.497216  1.010001     ok
+128x256x32 w8 s3  256     252         0         49152              1        7.422976  1.000000     ok
+ 64x128x64 w2 s2   64      64       646         24576              4      323.160065 41.320590     ok
+ 64x128x64 w2 s2   96      96       482         24576              4      228.880386 29.265598     ok
+ 64x128x64 w2 s2  128     128       308         24576              4      131.791870 16.851457     ok
+ 64x128x64 w2 s2  168     168       196         24576              4       70.381569  8.999280     ok
+ 64x128x64 w2 s2  192     192       100         24576              4       35.663872  4.560131     ok
+ 64x128x64 w2 s2  255     255        12         24576              4        7.840256  1.002488     ok
+ 64x128x64 w2 s2  256     255        12         24576              4        7.820800  1.000000     ok
+ 64x256x64 w4 s2   64      64       620         40960              2      314.355713 40.776783     ok
+ 64x256x64 w4 s2   96      96       458         40960              2      226.391037 29.366408     ok
+ 64x256x64 w4 s2  128     128       282         40960              2      129.685501 16.822209     ok
+ 64x256x64 w4 s2  168     168       176         40960              2       68.765694  8.919971     ok
+ 64x256x64 w4 s2  192     192        82         40960              2       30.709761  3.983530     ok
+ 64x256x64 w4 s2  255     255         0         40960              2        7.686656  0.997078     ok
+ 64x256x64 w4 s2  256     255         0         40960              2        7.709184  1.000000     ok
+[sweep] 60 tasks, 30 pending this session (run_id=stages_v1)
+[sweep] 25/30 done, 21s elapsed, ~4s left
+            shared_bytes  ptx_cp_async  n_regs  time_rel
+num_stages                                              
+1                20480.0           0.0   218.0  1.336671
+2                20480.0          12.0   242.0  1.045000
+3                40960.0          18.0   252.0  1.041667
+4                61440.0          24.0   182.0  1.096689
+5                81920.0          30.0   182.0  1.253052
+6               102400.0          36.0   104.0  1.888750
+===== phase6_experiments: done in 1.2 min =====
+===== phase8_integration =====
+archtune_top8    mm_M128_N1600_K960     tune     4.4s  0.0891 ms
+archtune_top16   mm_M128_N1600_K960     tune     8.2s  0.0389 ms
+archtune_top8    mm_M2048_N2560_K960    tune     5.5s  0.5591 ms
+archtune_top16   mm_M2048_N2560_K960    tune    10.9s  0.5263 ms
+archtune_top8    mm_M4096_N4096_K4096   tune     5.9s  7.3851 ms
+archtune_top16   mm_M4096_N4096_K4096   tune    11.7s  7.4076 ms
+inductor mm_M128_N1600_K960: 1.0s, 0.0963 ms
+inductor mm_M2048_N2560_K960: 0.2s, 0.6676 ms
+inductor mm_M4096_N4096_K4096: 0.2s, 8.3149 ms
+===== phase8_integration: done in 0.9 min =====
+===== phase9_liveness =====
+       n_regs  peak_live_units
+count   333.0            384.0
+mean    163.9            279.1
+std      76.8            263.4
+min      40.0             34.0
+25%      96.0            113.0
+50%     168.0            188.0
+75%     255.0            335.0
+max     255.0           1604.0
+===== phase9_liveness: done in 2.4 min =====
+===== make_report =====
+wrote docs/RESULTS.md; figures: 4
+===== make_report: done in 0.0 min =====
+# ArchTune results (auto-generated)
+
+Generated by `python -m archtune.report` from `results/`. Do not edit by hand.
+
+## Environment and sweep status
+
+| gpu | stack_id | rows | noise CV | tie threshold |
+|---|---|---|---|---|
+| rtx3050_sm86 | 6b22da024d | 6992 | 0.0538 | 0.108 |
+
+
+**Status counts — rtx3050_sm86**
+
+| kernel | ok | out_of_resources |
+|---|---|---|
+| matmul | 5.99e+03 | 918 |
+| rmsnorm | 80 | 0 |
+
+
+**Small-first estimate vs actual — rtx3050_sm86**
+
+| table | n_evaluated | estimate_s | elapsed_s |
+|---|---|---|---|
+| sweep | 6982 | 4.13e+03 | 1.92e+03 |
+
+
+## RQ1 — Predictor accuracy (matmul)
+
+**rtx3050_sm86**
+
+| variant | regs median |err| (non-spilling) | regs exact | smem exact match | smem median |err| (B) | spill precision | spill recall |
+|---|---|---|---|---|---|---|
+| fitted | 6 | 0.0703 | 0.991 | 0 | 0.975 | 1 |
+| analytic | 60 | 0 | 0 | 1.84e+04 | 1 | 0.714 |
+
+
+![fig2 rtx3050_sm86](../results/figures/fig2_predictor_rtx3050_sm86.png)
+
+
+## RQ2 — Search efficiency (replay over exhaustive sweep)
+
+Table 6: cost to reach ≥ 95% of the exhaustive best. `reach_rate` = fraction of shapes (× seeds for random) that reached the target; costs are medians.
+
+
+**rtx3050_sm86**
+
+| gpu_tag | kernel | split | strategy | n_shapes | reach_rate | median_configs | median_cost_s |
+|---|---|---|---|---|---|---|---|
+| rtx3050_sm86 | matmul | test | exhaustive | 9 | 1 | 384 | 1.18e+03 |
+| rtx3050_sm86 | matmul | test | random | 9 | 1 | 7 | 7.58 |
+| rtx3050_sm86 | matmul | test | smart | 9 | 1 | 1 | 0.653 |
+| rtx3050_sm86 | matmul | test | smart_analytic | 9 | 1 | 1 | 0.63 |
+| rtx3050_sm86 | matmul | train | exhaustive | 9 | 1 | 384 | 1.18e+03 |
+| rtx3050_sm86 | matmul | train | random | 9 | 1 | 11.5 | 19.4 |
+| rtx3050_sm86 | matmul | train | smart | 9 | 1 | 23 | 11.6 |
+| rtx3050_sm86 | matmul | train | smart_analytic | 9 | 1 | 17 | 8.79 |
+| rtx3050_sm86 | rmsnorm | test | exhaustive | 2 | 1 | 20 | 3.18 |
+| rtx3050_sm86 | rmsnorm | test | random | 2 | 1 | 5.25 | 0.816 |
+| rtx3050_sm86 | rmsnorm | test | smart | 2 | 1 | 7.5 | 1.18 |
+| rtx3050_sm86 | rmsnorm | test | smart_analytic | 2 | 1 | 7.5 | 1.18 |
+| rtx3050_sm86 | rmsnorm | train | exhaustive | 2 | 1 | 20 | 3.12 |
+| rtx3050_sm86 | rmsnorm | train | random | 2 | 1 | 1.5 | 0.238 |
+| rtx3050_sm86 | rmsnorm | train | smart | 2 | 1 | 2 | 0.284 |
+| rtx3050_sm86 | rmsnorm | train | smart_analytic | 2 | 1 | 2 | 0.284 |
+
+
+Median cost ratio random-k / smart-k (> 1 means smart is cheaper):
+
+| gpu_tag | kernel | split | random_over_smart |
+|---|---|---|---|
+| rtx3050_sm86 | matmul | test | 11.6 |
+| rtx3050_sm86 | matmul | train | 1.66 |
+| rtx3050_sm86 | rmsnorm | test | 0.693 |
+| rtx3050_sm86 | rmsnorm | train | 0.841 |
+
+
+![fig1 rtx3050_sm86](../results/figures/fig1_quality_vs_cost_rtx3050_sm86.png)
+
+
+## RQ4 — Compiler experiments
+
+![fig3 rtx3050_sm86](../results/figures/fig3_maxnreg_rtx3050_sm86.png)
+
+![fig4](../results/figures/fig4_num_stages.png)
+
+
+## Integration — live `triton.autotune` with ArchTune prunin
+ALL PHASES DONE in 37.3 min

@@ -1,0 +1,11 @@
+cfg_hash,cfg_BLOCK_SIZE_M,cfg_BLOCK_SIZE_N,cfg_BLOCK_SIZE_K,cfg_GROUP_SIZE_M,cfg_num_warps,cfg_num_stages,cfg_BLOCK_SIZE,n_regs,n_spills,shared_bytes,regs_pred,regs_pred_analytic,spill_pred,spill_pred_analytic,smem_pred,smem_pred_analytic,regs_abs_err,explanation
+0016c3f1e96c,32.0,128.0,64.0,8.0,2,4.0,,252.0,0.0,61440,214,96,False,False,61440,81920,38.0,unexplained
+7b62bad29dd6,32.0,128.0,32.0,8.0,2,4.0,,206.0,0.0,30720,172,96,False,False,30720,40960,34.0,unexplained
+89eba95e8d95,32.0,128.0,32.0,8.0,2,3.0,,196.0,0.0,20480,170,96,False,False,20480,30720,26.0,unexplained
+1ad6d56936d8,32.0,128.0,64.0,8.0,2,3.0,,232.0,0.0,40960,209,96,False,False,40960,61440,23.0,unexplained
+9fa1c75b1638,64.0,256.0,32.0,8.0,8,3.0,,172.0,0.0,40960,150,96,False,False,40960,61440,22.0,unexplained
+0ae6a5008163,32.0,128.0,32.0,8.0,2,5.0,,196.0,0.0,40960,175,96,False,False,40960,51200,21.0,unexplained
+cdbc6b923aac,32.0,256.0,32.0,8.0,8,4.0,,124.0,0.0,55296,103,64,False,False,55296,73728,21.0,unexplained
+fc76bbde77d3,128.0,128.0,32.0,8.0,8,4.0,,168.0,0.0,49152,147,96,False,False,49152,65536,21.0,unexplained
+0053c6be3d33,64.0,256.0,32.0,8.0,8,4.0,,172.0,0.0,61440,152,96,False,False,61440,81920,20.0,unexplained
+e3f2ab56fa10,128.0,128.0,32.0,8.0,8,3.0,,166.0,0.0,32768,147,96,False,False,32768,49152,19.0,unexplained
