@@ -1,0 +1,12 @@
+# Pinned GPU stack for ALL GPUs (T4 / A100 / L4). See docs/DECISIONS.md (D-001, D-002).
+# torch 2.6.0 on PyPI is the CUDA 12.4 build and requires exactly triton 3.2.0,
+# the newest official Triton release that still supports sm_75 (Turing / T4).
+torch==2.6.0
+triton==3.2.0
+# Numerics/IO stack: lower bounds only; the exact installed versions are recorded in
+# every result row and in results/<gpu_tag>/pip_freeze.txt (D-002).
+numpy>=1.26
+pandas>=2.1
+pyarrow>=14
+matplotlib>=3.8
+scipy>=1.11
