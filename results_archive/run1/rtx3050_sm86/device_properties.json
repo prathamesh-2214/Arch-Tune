@@ -1,0 +1,15 @@
+{
+  "L2_cache_size": 1572864,
+  "gcnArchName": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "is_integrated": 0,
+  "is_multi_gpu_board": 0,
+  "major": 8,
+  "max_threads_per_multi_processor": 1536,
+  "minor": 6,
+  "multi_processor_count": 20,
+  "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "regs_per_multiprocessor": 65536,
+  "total_memory": 6441926656,
+  "uuid": "f8f096f1-a504-d644-cb27-18fc6fb8b4e2",
+  "warp_size": 32
+}

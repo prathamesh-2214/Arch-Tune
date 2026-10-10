@@ -1,0 +1,49 @@
+{
+  "torch": "2.6.0+cu124",
+  "triton": "3.2.0",
+  "cuda": "12.4",
+  "JITFunction.warmup": "(self, *args, grid, **kwargs)",
+  "triton.Config.__init__": "(self, kwargs, num_warps=4, num_stages=2, num_ctas=1, num_buffers_warp_spec=0, num_consumer_groups=0, reg_dec_producer=0, reg_inc_consumer=0, maxnreg=None, pre_hook=None)",
+  "maxnreg_in_Config": true,
+  "triton.autotune": "(configs, key, prune_configs_by=None, reset_to_zero=None, restore_value=None, pre_hook=None, post_hook=None, warmup=None, rep=None, use_cuda_graph=False, do_bench=None)",
+  "Autotuner.prune_configs": "(self, kwargs)",
+  "prune_configs_calls": {
+    "early_config_prune(self.configs, self.nargs": true,
+    "perf_model(": true,
+    "all_kwargs()": true
+  },
+  "do_bench": "(fn, warmup=25, rep=100, grad_to_none=None, quantiles=None, return_mode='mean')",
+  "do_bench_flushes_l2": {
+    "cache.zero_()": true,
+    "get_empty_cache_for_benchmark": true,
+    "clear_cache": false
+  },
+  "cache_dir_env_read_at_init": {
+    "TRITON_CACHE_DIR": true
+  },
+  "triton_device_properties_keys": [
+    "max_num_regs",
+    "max_shared_mem",
+    "mem_bus_width",
+    "mem_clock_rate",
+    "multiprocessor_count",
+    "sm_clock_rate",
+    "warpSize"
+  ],
+  "torch_device_properties_attrs": [
+    "L2_cache_size",
+    "gcnArchName",
+    "is_integrated",
+    "is_multi_gpu_board",
+    "major",
+    "max_threads_per_multi_processor",
+    "minor",
+    "multi_processor_count",
+    "name",
+    "regs_per_multiprocessor",
+    "total_memory",
+    "uuid",
+    "warp_size"
+  ],
+  "inductor_mm_common.mm_configs": "error: cannot import name 'CppGemmTemplate' from partially initialized module 'torch._inductor.codegen.cpp_gemm_template' (most likely due to a circular import) (/home/praths_2209/atenv2/lib/python3.12/site-packages/torch/_inductor/codegen/cpp_gemm_template.py)"
+}

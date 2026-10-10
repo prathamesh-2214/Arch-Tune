@@ -1,0 +1,17 @@
+gpu_tag,kernel,split,strategy,n_shapes,reach_rate,median_configs,median_cost_s
+rtx3050_sm86,matmul,test,exhaustive,9,1.0,384.0,1222.523571281997
+rtx3050_sm86,matmul,test,random,9,1.0,9.0,13.805297338500111
+rtx3050_sm86,matmul,test,smart,9,1.0,4.0,1.1678877700001067
+rtx3050_sm86,matmul,test,smart_analytic,9,1.0,2.0,0.687633913999889
+rtx3050_sm86,matmul,train,exhaustive,9,1.0,384.0,1221.6198885479896
+rtx3050_sm86,matmul,train,random,9,1.0,15.5,21.55094576750014
+rtx3050_sm86,matmul,train,smart,9,1.0,30.0,15.169212901999117
+rtx3050_sm86,matmul,train,smart_analytic,9,1.0,20.0,9.887226300999828
+rtx3050_sm86,rmsnorm,test,exhaustive,2,1.0,20.0,3.0781471515010708
+rtx3050_sm86,rmsnorm,test,random,2,1.0,4.0,0.6123129444995357
+rtx3050_sm86,rmsnorm,test,smart,2,1.0,8.0,1.2455963965005594
+rtx3050_sm86,rmsnorm,test,smart_analytic,2,1.0,8.0,1.2456932080003753
+rtx3050_sm86,rmsnorm,train,exhaustive,2,1.0,20.0,3.0383765960016262
+rtx3050_sm86,rmsnorm,train,random,2,1.0,1.5,0.2310535457501146
+rtx3050_sm86,rmsnorm,train,smart,2,1.0,2.5,0.36232957350034667
+rtx3050_sm86,rmsnorm,train,smart_analytic,2,1.0,2.5,0.3624966500001392
