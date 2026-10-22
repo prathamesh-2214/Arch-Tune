@@ -6,7 +6,7 @@ ptxas register allocation.**
 `torch.compile` (in `max-autotune` mode) and `triton.autotune` find the fastest GPU kernel by *compiling and
 benchmarking every candidate configuration*. Compilation dominates that cost, and many candidates are doomed:
 they **spill registers** or **overflow shared memory**, which the compiler only reveals *after* the work is done.
-ArchTune predicts those outcomes **before compiling** and only compiles a short, ranked list.
+ArchTune prunes those outcomes **before compiling** and only compiles a short, ranked list.
 
 <p align="center"><img src="docs/img/stack.svg" alt="Where ArchTune sits in the torch.compile stack" width="900"></p>
 
